@@ -1,0 +1,48 @@
+.top-bar {
+    padding: .5rem 0;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .contact-numbers {
+      display: flex;
+      gap: 16px;
+      a {
+        font-size: 0.8125rem;
+        color: #1f1f1f;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &:hover {
+          span {
+            text-decoration: underline !important;
+            color: #0056b3;
+          }
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+    .actions {
+      button {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        background: #fff;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 1px 2px 15px 0 rgb(0 0 0 / 15%);
+        padding: 0.5rem 0.9375rem;
+        cursor: pointer;
+        &:nth-child(2) {
+          margin-left: 0.3125rem;
+          margin-right: 0.5rem;
+        }
+        &:last-child {
+            background: #4842a8;
+            color: #FFF;
+        }
+      }
+    }
+  }
+}
