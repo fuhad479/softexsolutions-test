@@ -10,16 +10,8 @@ export default function Calendar() {
 
   const [currentMonth, setCurrentMonth] = useState(dateValue.getMonth());
 
-  const startOfTheMonth = new Date(
-    dateValue.getFullYear(),
-    currentMonth,
-    1
-  );
-  const endOfTheMonth = new Date(
-    dateValue.getFullYear(),
-    currentMonth + 1,
-    0
-  );
+  const startOfTheMonth = new Date(dateValue.getFullYear(), currentMonth, 1);
+  const endOfTheMonth = new Date(dateValue.getFullYear(), currentMonth + 1, 0);
   const totalDatesInMonth =
     endOfTheMonth.getDate() - startOfTheMonth.getDate() + 1;
 
@@ -94,7 +86,11 @@ export default function Calendar() {
             return (
               <div
                 key={date}
-                className={`date ${today === date ? "today" : ""}`}
+                className={`date ${
+                  today === date && currentMonth === dateValue.getMonth()
+                    ? "today"
+                    : ""
+                }`}
               >
                 {date}
               </div>
