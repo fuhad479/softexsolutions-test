@@ -1,0 +1,44 @@
+.sticky-modal {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  margin-right: -18.75rem;
+  transition: 0.3s;
+  &.open {
+    margin-right: 0;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4842a8;
+    border: none;
+  }
+  .scheduler {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #4842a8;
+    color: #fff;
+    padding: 1.875rem;
+    a {
+      display: flex;
+      gap: 8px;
+      color: #FFF;
+    }
+    .clndr {
+    width: 240px;
+    display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      background: linear-gradient(90deg, #403b97 0%, #393486 100%) !important;
+      padding: 1.125rem;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import ScheduleCall from "src/components/ScheduleCall";
 import SocialMedia from "src/components/SocialMedia";
 import CallToAction from "src/components/CallToAction";
 import Footer from "src/components/Footer";
+import StickyModal from "src/components/StickyModal";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <SocialMedia />
       <CallToAction />
       <Footer />
+      <StickyModal />
     </>
   );
 }
