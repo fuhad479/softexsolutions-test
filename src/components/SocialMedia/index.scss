@@ -1,0 +1,34 @@
+.social-media {
+  padding: 3.75rem 0;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-content {
+      width: 30%;
+      .stroked-title {
+        margin-bottom: 1rem;
+        &::before {
+          content: "Social";
+        }
+      }
+    }
+    .right-content {
+      width: 70%;
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
+      .social-icon {
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 15px 0 rgb(0 0 0 / 7%);
+        padding: 1.5625rem;
+        transition: 0.3s;
+        &:hover {
+          border-color: #5a54b0;
+        }
+      }
+    }
+  }
+}
