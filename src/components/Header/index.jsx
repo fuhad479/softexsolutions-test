@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { ReactComponent as Logo } from "src/assets/logo.svg";
 import { ReactComponent as MenuIcon } from "src/assets/hamburgers.svg";
 import { ReactComponent as IndianFlag } from "src/assets/indian-flag.svg";
@@ -12,11 +14,18 @@ import { ReactComponent as LinkedinIcon } from "src/assets/linkedin.svg";
 import { ReactComponent as YoutubeIcon } from "src/assets/youtube.svg";
 import { ReactComponent as HyperlinkIcon } from "src/assets/hyperlink-info-system.svg";
 
+import MobileNavigation from "../MobileNavigation";
 import TopBar from "../TopBar";
 
 import "./index.scss";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  function navToggler() {
+    setOpen((prevState) => !prevState);
+  }
+
   return (
     <>
       <TopBar />
@@ -111,12 +120,13 @@ export default function Header() {
                 </button>
               </ul>
             </nav>
-            <button type="button" className="menu-button">
+            <button type="button" className="menu-button" onClick={navToggler}>
               <MenuIcon width={30} height={30} />
             </button>
           </div>
         </div>
       </div>
+      {open && <MobileNavigation />}
     </>
   );
 }

@@ -1,0 +1,109 @@
+.mobile-navigation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #FFF;
+  box-shadow: 0 0 20px 0 #385098;
+  .mobile-navigation {
+    display: flex;
+    .sub-menu-wrapper,
+    .main-menu-wrapper {
+      width: 100%;
+    }
+    .sub-menu-wrapper {
+      .sub-navigation {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &-item {
+          line-height: 50px;
+          padding: 0 2.5rem 0 1.25rem;
+          &:first-child {
+            padding: 0 1.25rem 0 2.5rem;
+            position: relative;
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              margin-top: -1px;
+              display: inline-block;
+              height: 2px;
+              width: 10px;
+              background: #464c4e;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+            }
+            &::before {
+              left: 20px;
+              -webkit-transform-origin: 1px 50%;
+              transform-origin: 1px 50%;
+              transform: rotate(45deg);
+            }
+            &::after {
+              left: 20px;
+              -webkit-transform-origin: 1px 50%;
+              transform-origin: 1px 50%;
+              transform: rotate(-45deg);
+            }
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+    }
+    .main-menu-wrapper {
+      // margin-left: 50%;
+      .main-navigation {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &-item {
+          line-height: 50px;
+          padding: 0 2.5rem 0 1.25rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+          }
+          &.sub-item {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              margin-top: -1px;
+              display: inline-block;
+              height: 2px;
+              width: 10px;
+              background: #464c4e;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              right: 20px;
+              -webkit-transform-origin: 9px 50%;
+              transform-origin: 9px 50%;
+              transform: rotate(45deg);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              margin-top: -1px;
+              display: inline-block;
+              height: 2px;
+              width: 10px;
+              background: #464c4e;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              right: 20px;
+              -webkit-transform-origin: 9px 50%;
+              transform-origin: 9px 50%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
