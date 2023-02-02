@@ -1,5 +1,7 @@
 .header {
   .main-header {
+    position: sticky;
+    top: 0;
     box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
     &-content {
       height: 80px;
