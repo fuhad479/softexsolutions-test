@@ -4,8 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     .left-content {
       width: 30%;
+      @media screen and (max-width: 992px) {
+        width: 35%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
       .stroked-title {
         margin-bottom: 1rem;
         &::before {
@@ -18,6 +27,14 @@
       display: flex;
       gap: 15px;
       justify-content: flex-end;
+      @media screen and (max-width: 992px) {
+        width: 65%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       .social-icon {
         display: block;
         border: 1px solid #fff;
@@ -25,6 +42,9 @@
         box-shadow: 0 10px 15px 0 rgb(0 0 0 / 7%);
         padding: 1.5625rem;
         transition: 0.3s;
+        @media screen and (max-width: 992px) {
+          padding: 1.25rem;
+        }
         &:hover {
           border-color: #5a54b0;
         }

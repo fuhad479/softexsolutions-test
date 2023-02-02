@@ -18,6 +18,9 @@ button, input {
   font-size: 1.875rem;
   font-weight: 600;
   position: relative;
+  @media screen and (max-width: 768px) {
+    font-size: 1.375rem;
+  }
   &::before {
     font-size: 3.75rem;
     position: absolute;
@@ -28,5 +31,9 @@ button, input {
     opacity: .1;
     z-index: 0;
     width: 100%;
+    @media screen and (max-width: 992px) {
+      font-size: 2.25rem;
+      bottom: 10px;
+    }
   }
 }

@@ -13,6 +13,9 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 100%;
+      }
       .footer-menu {
         &:nth-child(1) {
           .stroked-title {
@@ -100,8 +103,15 @@
         }
       }
       .locations {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+        @media screen and (max-width: 992px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+          grid-template-columns: 100%;
+        }
         .location {
           font-size: 0.75rem;
           display: flex;
@@ -139,19 +149,28 @@
     }
     .newsletter-wrapper {
       display: flex;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
       .footer-menu {
         width: 40%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
         .stroked-title {
           &::before {
-            content: 'Help';
+            content: "Help";
           }
         }
       }
       .newsletter {
         width: 60%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
         .stroked-title {
           &::before {
-            content: 'Subscribe';
+            content: "Subscribe";
           }
         }
         .input-wrapper {
@@ -161,20 +180,23 @@
           input {
             width: 405px;
             background: none;
-            color: #FFF;
+            color: #fff;
             border: 0;
+            @media screen and (max-width: 992px) {
+              width: 100%;
+            }
             &:focus {
               outline: none;
             }
           }
           button {
             background: none;
-            color: #FFF;
+            color: #fff;
             border: none;
             padding: 0 2.1875rem;
           }
         }
-      } 
+      }
     }
     .copywrite {
       text-align: center;

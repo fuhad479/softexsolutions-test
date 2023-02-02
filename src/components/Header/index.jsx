@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from "src/assets/logo.svg";
+import { ReactComponent as MenuIcon } from "src/assets/hamburgers.svg";
 
 import TopBar from "../TopBar";
 
@@ -25,6 +26,9 @@ export default function Header() {
                 <button type="button" className="large-button">Get A Free Quote</button>
               </ul>
             </nav>
+            <button type="button" className="menu-button">
+              <MenuIcon width={30} height={30} />
+            </button>
           </div>
         </div>
       </div>

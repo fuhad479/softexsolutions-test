@@ -1,5 +1,8 @@
 .top-bar {
-    padding: .5rem 0;
+  padding: 0.5rem 0;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
   &-content {
     display: flex;
     align-items: center;
@@ -39,8 +42,8 @@
           margin-right: 0.5rem;
         }
         &:last-child {
-            background: #4842a8;
-            color: #FFF;
+          background: #4842a8;
+          color: #fff;
         }
       }
     }

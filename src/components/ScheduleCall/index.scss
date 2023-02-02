@@ -7,6 +7,9 @@
       font-weight: 700;
       text-align: center;
       margin: 3.75rem 0;
+      @media screen and (max-width: 768px) {
+        font-size: 1.8125rem;
+      }
     }
     .call-scheduler {
         width: 800px;
@@ -15,12 +18,27 @@
       border: 1px solid rgba(26, 26, 26, 0.1);
       border-radius: 8px;
       box-shadow: 0 1px 8px 0 rgb(0 0 0 / 8%);
+      @media screen and (max-width: 992px) {
+        width: 680px;
+        flex-direction: column;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+      }
       .left-content,
       .right-content {
         width: 50%;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
       }
       .left-content {
         border-right: 1px solid rgba(26, 26, 26, 0.1);
+        @media screen and (max-width: 992px) {
+          border-right: 0;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
         .top {
             display: flex;
             align-items: center;
@@ -42,22 +60,39 @@
                 font-size: 1rem;
                 font-weight: 700;
                 color: rgba(26,26,26,0.61);
+                @media screen and (max-width: 992px) {
+                  text-align: center;
+                }
             }
             .title {
                 font-size: 1.75rem;
                 font-weight: 600;
                 margin-bottom: 1.5rem;
+                @media screen and (max-width: 992px) {
+                  text-align: center;
+                }
+                @media screen and (max-width: 768px) {
+                  font-size: 1.625rem;
+                }
             }
             .duration {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 1.25rem;
+                @media screen and (max-width: 992px) {
+                  justify-content: center;
+                }
                 span {
                     font-weight: 500;
                 }
             }
             .agenda {
+              @media screen and (max-width: 992px) {
+                max-width: 400px;
+                padding: 0 1.875rem;
+                margin: 0 auto;
+              }
                 ol {
                     display: block;
                     padding-left: 1rem;
