@@ -1,0 +1,185 @@
+.footer {
+  background: #1f1f1f;
+  color: #fff;
+  padding-top: 8.75rem;
+  &-content {
+    .stroked-title {
+      margin: 3.75rem 0 1.5625rem;
+      &::before {
+        -webkit-text-stroke: 2px #fff;
+      }
+    }
+    .footer-menus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      .footer-menu {
+        &:nth-child(1) {
+          .stroked-title {
+            &::before {
+              content: "About";
+            }
+          }
+        }
+        &:nth-child(2) {
+          .stroked-title {
+            &::before {
+              content: "Mobile";
+            }
+          }
+        }
+        &:nth-child(3) {
+          .stroked-title {
+            &::before {
+              content: "Web";
+            }
+          }
+        }
+        &:nth-child(4) {
+          .stroked-title {
+            &::before {
+              content: "Ecommerce";
+            }
+          }
+        }
+        &:nth-child(5) {
+          .stroked-title {
+            &::before {
+              content: "AI";
+            }
+          }
+        }
+        &:nth-child(6) {
+          .stroked-title {
+            &::before {
+              content: "IoT";
+            }
+          }
+        }
+        &:nth-child(7) {
+          .stroked-title {
+            &::before {
+              content: "Blockchain";
+            }
+          }
+        }
+        &:nth-child(8) {
+          .stroked-title {
+            &::before {
+              content: "Game";
+            }
+          }
+        }
+        &:nth-child(9) {
+          .stroked-title {
+            &::before {
+              content: "Salesforce";
+            }
+          }
+        }
+      }
+    }
+    .footer-menu {
+      .navigation {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        .navigation-item {
+          padding: 0.3125rem 0;
+          cursor: pointer;
+          &:hover {
+            color: #dc2e3d;
+          }
+        }
+      }
+    }
+    .locate-us {
+      .stroked-title {
+        &::before {
+          content: "Locate Us";
+        }
+      }
+      .locations {
+        display: flex;
+        gap: 30px;
+        .location {
+          font-size: 0.75rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          .thumbnail {
+            width: 70px;
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .location-details {
+            width: calc(100% - 70px);
+            .country {
+              font-size: 1rem;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              svg {
+                width: auto;
+              }
+            }
+            .address,
+            .mobile {
+              margin: 0;
+            }
+            .address {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+    .newsletter-wrapper {
+      display: flex;
+      .footer-menu {
+        width: 40%;
+        .stroked-title {
+          &::before {
+            content: 'Help';
+          }
+        }
+      }
+      .newsletter {
+        width: 60%;
+        .stroked-title {
+          &::before {
+            content: 'Subscribe';
+          }
+        }
+        .input-wrapper {
+          display: inline-flex;
+          border: 1px solid #535353;
+          padding: 1.25rem 0 1.25rem 1.5625rem;
+          input {
+            width: 405px;
+            background: none;
+            color: #FFF;
+            border: 0;
+            &:focus {
+              outline: none;
+            }
+          }
+          button {
+            background: none;
+            color: #FFF;
+            border: none;
+            padding: 0 2.1875rem;
+          }
+        }
+      } 
+    }
+    .copywrite {
+      text-align: center;
+      padding: 2.1875rem 0;
+      margin-top: 3.125rem;
+    }
+  }
+}
