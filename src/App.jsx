@@ -9,17 +9,22 @@ import BackToTop from "src/components/BackToTop";
 
 function App() {
   const [totalHeight, setTotalHeight] = useState(0);
-
-  const windowHeight = window.innerHeight;
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
-    setTotalHeight(document.lastElementChild.offsetHeight - windowHeight);
+    setTotalHeight(document.lastElementChild.offsetHeight - window.innerHeight);
   }, []);
 
+  // console.log(totalHeight);
+
   window.onscroll = () => {
-    let y = totalHeight - window.scrollY;
-    let per = (y / document.lastElementChild.offsetHeight) * 100;
-    console.log(per);
+    setScrollPercentage((window.scrollY / totalHeight) * 100);
+    if (window.scrollY > 51) {
+      setVisibility(true);
+    } else {
+      setVisibility(false);
+    }
   };
 
   return (
@@ -30,7 +35,7 @@ function App() {
       <CallToAction />
       <Footer />
       <StickyModal />
-      <BackToTop />
+      {visibility && <BackToTop percentage={scrollPercentage} />}
     </>
   );
 }
