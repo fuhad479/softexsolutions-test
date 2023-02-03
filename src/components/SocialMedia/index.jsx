@@ -27,9 +27,6 @@ export default function SocialMedia() {
               <TwitterIcon />
             </a>
             <a href="#" target="_blank" className="social-icon">
-              <FacebookIcon />
-            </a>
-            <a href="#" target="_blank" className="social-icon">
               <InstagramIcon />
             </a>
             <a href="#" target="_blank" className="social-icon">
